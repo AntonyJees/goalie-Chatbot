@@ -17,6 +17,53 @@ nlu:
     - goodevening
     - good afternoon
 
+- intent: country_matches
+  examples: |
+    - show me country matches
+    - I want to see country matches
+    - country matches
+    - country
+    - which country matches are there
+    - tell me country matches
+    - country match info
+    - country match details
+
+- intent: league_matches
+  examples: |
+    - show me league matches
+    - I want to see league matches
+    - league matches
+    - league
+    - which league matches are there
+    - tell me league matches
+    - league match info
+    - league match details
+    - show today's league matches
+    - what leagues are playing today
+    - which leagues have matches today
+    - show me football league games
+    - I want to know about leagues
+    - give me info about league games
+    - show current league fixtures
+    - tell me about league fixtures
+    - list all league matches
+    - league match schedule
+    - show upcoming league matches
+    - any league matches happening now?
+    - show me popular league matches
+
+
+- intent: choose-type
+  examples: |
+    - I want country matches
+    - Show me league matches
+    - Country matches
+    - League matches
+    - Country
+    - League
+    - I want to see country matches
+    - I want to see league matches
+
 - intent: goodbye
   examples: |
     - cu
