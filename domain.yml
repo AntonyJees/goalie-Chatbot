@@ -12,6 +12,29 @@ intents:
   - country_matches
   - league_matches
   - match_inquiry
+  - league
+
+entities:
+  - league
+  - country
+
+actions:
+  - action_show_league_matches
+
+slots:
+  league:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: league
+
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: country
 
 responses:
   utter_greet:
@@ -21,7 +44,7 @@ responses:
   - text: "Great! Which country's matches would you like to see?"
 
   utter_league_matches:
-  - text: "Great! Which league's matches would you like to see?"
+  - text: "Great! Which country's league matches would you like to see?"
 
   utter_choose_type:
   - text: "Do you want to know about country matches or league matches?"

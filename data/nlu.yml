@@ -28,29 +28,23 @@ nlu:
     - country match info
     - country match details
 
-- intent: league_matches
+- intent: league
   examples: |
-    - show me league matches
-    - I want to see league matches
-    - league matches
-    - league
-    - which league matches are there
-    - tell me league matches
-    - league match info
-    - league match details
-    - show today's league matches
-    - what leagues are playing today
-    - which leagues have matches today
-    - show me football league games
-    - I want to know about leagues
-    - give me info about league games
-    - show current league fixtures
-    - tell me about league fixtures
-    - list all league matches
-    - league match schedule
-    - show upcoming league matches
-    - any league matches happening now?
-    - show me popular league matches
+    - show me [LaLiga](league) matches from [Spain](country)
+    - I want to see [Premier League](league) matches in [England](country)
+    - show [Bundesliga](league) matches from [Germany](country)
+    - list all [Serie A](league) games in [Italy](country)
+    - tell me [Ligue 1](league) matches from [France](country)
+    - show [Eredivisie](league) fixtures in [Netherlands](country)
+    - what [LaLiga](league) games are happening in [Spain](country)
+    - give me [Premier League](league) match info for [England](country)
+    - [Bundesliga](league) match schedule in [Germany](country)
+    - any [Serie A](league) matches today in [Italy](country)
+    - show today's [LaLiga](league) fixtures from [Spain](country)
+    - what [Ligue 1](league) matches are on in [France](country)
+    - show upcoming [Premier League](league) matches in [England](country)
+    - tell me about [LaLiga](league) games happening in [Spain](country)
+    - give me [Serie A](league) match details in [Italy](country)
 
 
 - intent: choose-type

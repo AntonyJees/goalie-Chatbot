@@ -3,6 +3,13 @@
 # Server where the models are pulled from.
 # https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server
 
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+api:
+  football_base_url: "https://v3.football.api-sports.io"
+  football_api_key: "758c280f1a7f6a92f504b65658fdceef"
+
 #models:
 #  url: http://my-server.com/models/default_core@latest
 #  wait_time_between_pulls:  10   # [optional](default: 100)

@@ -10,6 +10,12 @@ stories:
   - action: utter_happy
   # - intent: country_matches
 
+- story: show league matches
+  steps:
+    - intent: league
+    - action: action_show_league_matches
+
+
 - story : ask about matches
   steps:
   - intent: country_matches
