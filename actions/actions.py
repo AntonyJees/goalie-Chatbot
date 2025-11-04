@@ -6,44 +6,86 @@ import yaml
 from pathlib import Path
 
 
-def load_api_config():
-    config_path = Path(__file__).parent.parent / "endpoints.yml"
-    with open(config_path, "r") as file:
-        config = yaml.safe_load(file)
-    return config.get("api", {}) 
+class ApiConfig:
 
-class ActionShowLeagueMatches(Action):
+    @staticmethod
+    def get_api_config():
+        config_path = Path(__file__).parent.parent / "endpoints.yml"
 
-    def name(self) -> str:
-        return "action_show_league_matches"
+        try:
+            with open(config_path, "r") as file:
+                config = yaml.safe_load(file)
+            api_config = config.get("api", {})
+            return {
+                "base_url": api_config.get("football_base_url"),
+                "api_key": api_config.get("football_api_key"),
+            }
+        except FileNotFoundError:
+            print("endpoints.yml not found.")
+            return {}
+        except yaml.YAMLError as e:
+            print(f"Error parsing endpoints.yml: {e}")
+            return {}
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: dict):
+# class ActionShowPlayerStats(Action):
+    
+#     def name(self) -> str:
+#         return "action_show_player_stats"
 
-        league = tracker.get_slot("league")
-        country = tracker.get_slot("country")
-        print(f"League: {league}, Country: {country}")
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: dict):
 
-        if not league or not country:
-            dispatcher.utter_message(text="Please tell me both the league and country.")
-            return []
+#         player_name = tracker.get_slot("player_name")
+#         if not player_name:
+#             dispatcher.utter_message(text="Please provide a player's name.")
+#             return []
 
-        api_url = "https://v3.football.api-sports.io/leagues"
-        headers = {"x-apisports-key": "YOUR_API_KEY"}
-        params = {"country": country, "name": league}
+        
+#         params = {"search": player_name}
 
-        response = requests.get(api_url, headers=headers, params=params)
-        data = response.json()
+#         response = requests.get(api_url, headers=headers, params=params)
+#         data = response.json()
 
-        if "response" in data and data["response"]:
-            league_info = data["response"][0]["league"]
-            message = f"✅ {league_info['name']} from {country} is available for season {league_info['season']}."
-            dispatcher.utter_message(text=message)
-        else:
-            dispatcher.utter_message(text=f"Sorry, I couldn't find {league} from {country}.")
+#         if "response" in data and data["response"]:
+#             player_info = data["response"][0]["player"]
+#             message = (f"✅ Player: {player_info['name']}\n")
+                       
 
-        return []
+
+
+# class ActionShowLeagueMatches(Action):
+
+#     def name(self) -> str:
+#         return "action_show_league_matches"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: dict):
+
+#         league = tracker.get_slot("league")
+#         country = tracker.get_slot("country")
+#         print(f"League: {league}, Country: {country}")
+
+#         if not league or not country:
+#             dispatcher.utter_message(text="Please tell me both the league and country.")
+#             return []
+
+#         api_url = "https://v3.football.api-sports.io/leagues"
+#         headers = {"x-apisports-key": "YOUR_API_KEY"}
+#         params = {"country": country, "name": league}
+
+#         response = requests.get(api_url, headers=headers, params=params)
+#         data = response.json()
+
+#         if "response" in data and data["response"]:
+#             league_info = data["response"][0]["league"]
+#             message = f"✅ {league_info['name']} from {country} is available for season {league_info['season']}."
+#             dispatcher.utter_message(text=message)
+#         else:
+#             dispatcher.utter_message(text=f"Sorry, I couldn't find {league} from {country}.")
+
+#         return []
 
 
 

@@ -17,46 +17,59 @@ nlu:
     - goodevening
     - good afternoon
 
-- intent: country_matches
+- intent: player_stats
   examples: |
-    - show me country matches
-    - I want to see country matches
-    - country matches
-    - country
-    - which country matches are there
-    - tell me country matches
-    - country match info
-    - country match details
+    - show me stats for [Lionel Messi](player)
+    - I want to see stats for [Cristiano Ronaldo](player)
+    - get me stats for [Neymar](player)
+    - player stats for [Kylian Mbappe](player)
+    - show stats of [Kevin De Bruyne](player)
+    - stats for [Robert Lewandowski](player)
+    - give me stats for [Sergio Ramos](player)
+    - I need stats for [Luka Modric](player)
+    - fetch stats for [Mohamed Salah](player)
+    - display stats for [Virgil van Dijk](player)
 
-- intent: league
-  examples: |
-    - show me [LaLiga](league) matches from [Spain](country)
-    - I want to see [Premier League](league) matches in [England](country)
-    - show [Bundesliga](league) matches from [Germany](country)
-    - list all [Serie A](league) games in [Italy](country)
-    - tell me [Ligue 1](league) matches from [France](country)
-    - show [Eredivisie](league) fixtures in [Netherlands](country)
-    - what [LaLiga](league) games are happening in [Spain](country)
-    - give me [Premier League](league) match info for [England](country)
-    - [Bundesliga](league) match schedule in [Germany](country)
-    - any [Serie A](league) matches today in [Italy](country)
-    - show today's [LaLiga](league) fixtures from [Spain](country)
-    - what [Ligue 1](league) matches are on in [France](country)
-    - show upcoming [Premier League](league) matches in [England](country)
-    - tell me about [LaLiga](league) games happening in [Spain](country)
-    - give me [Serie A](league) match details in [Italy](country)
+# - intent: country_matches
+#   examples: |
+#     - show me country matches
+#     - I want to see country matches
+#     - country matches
+#     - country
+#     - which country matches are there
+#     - tell me country matches
+#     - country match info
+#     - country match details
+
+# - intent: league
+#   examples: |
+#     - show me [LaLiga](league) matches from [Spain](country)
+#     - I want to see [Premier League](league) matches in [England](country)
+#     - show [Bundesliga](league) matches from [Germany](country)
+#     - list all [Serie A](league) games in [Italy](country)
+#     - tell me [Ligue 1](league) matches from [France](country)
+#     - show [Eredivisie](league) fixtures in [Netherlands](country)
+#     - what [LaLiga](league) games are happening in [Spain](country)
+#     - give me [Premier League](league) match info for [England](country)
+#     - [Bundesliga](league) match schedule in [Germany](country)
+#     - any [Serie A](league) matches today in [Italy](country)
+#     - show today's [LaLiga](league) fixtures from [Spain](country)
+#     - what [Ligue 1](league) matches are on in [France](country)
+#     - show upcoming [Premier League](league) matches in [England](country)
+#     - tell me about [LaLiga](league) games happening in [Spain](country)
+#     - give me [Serie A](league) match details in [Italy](country)
 
 
-- intent: choose-type
-  examples: |
-    - I want country matches
-    - Show me league matches
-    - Country matches
-    - League matches
-    - Country
-    - League
-    - I want to see country matches
-    - I want to see league matches
+# - intent: choose-type
+#   examples: |
+#     - I want country matches
+#     - Show me league matches
+#     - Country matches
+#     - League matches
+#     - Country
+#     - League
+#     - I want to see country matches
+#     - I want to see league matches
 
 - intent: goodbye
   examples: |

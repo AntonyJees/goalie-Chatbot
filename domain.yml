@@ -8,46 +8,56 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - choose_type
-  - country_matches
-  - league_matches
-  - match_inquiry
-  - league
+  # - choose_type
+  # - country_matches
+  # - league_matches
+  # - match_inquiry
+  # - league
+  - player_stats
 
 entities:
-  - league
-  - country
+  # - league
+  # - country
+  - player
 
 actions:
   - action_show_league_matches
+  - action_show_player_stats
 
 slots:
-  league:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: league
+  # league:
+  #   type: text
+  #   influence_conversation: true
+  #   mappings:
+  #     - type: from_entity
+  #       entity: league
 
-  country:
+  # country:
+  #   type: text
+  #   influence_conversation: true
+  #   mappings:
+  #     - type: from_entity
+  #       entity: country
+  
+  player:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: country
+        entity: player
 
 responses:
   utter_greet:
   - text: "Hey! I am Goalie, your football match assistant. \n Do you want to know about country matches or league matches?"
 
-  utter_country_matches:
-  - text: "Great! Which country's matches would you like to see?"
+  # utter_country_matches:
+  # - text: "Great! Which country's matches would you like to see?"
 
-  utter_league_matches:
-  - text: "Great! Which country's league matches would you like to see?"
+  # utter_league_matches:
+  # - text: "Great! Which country's league matches would you like to see?"
 
-  utter_choose_type:
-  - text: "Do you want to know about country matches or league matches?"
+  # utter_choose_type:
+  # - text: "Do you want to know about country matches or league matches?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"

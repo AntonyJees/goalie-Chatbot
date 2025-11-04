@@ -10,33 +10,38 @@ stories:
   - action: utter_happy
   # - intent: country_matches
 
-- story: show league matches
+- story: player stats inquiry
   steps:
-    - intent: league
-    - action: action_show_league_matches
+    - intent: player_stats
+    - action: action_show_player_stats
+
+# - story: show league matches
+#   steps:
+#     - intent: league
+#     - action: action_show_league_matches
 
 
-- story : ask about matches
-  steps:
-  - intent: country_matches
-  - action: utter_country_matches
+# - story : ask about matches
+#   steps:
+#   - intent: country_matches
+#   - action: utter_country_matches
 
-- story: ask about league matches
-  steps:
-  - intent: league_matches
-  - action: utter_league_matches
+# - story: ask about league matches
+#   steps:
+#   - intent: league_matches
+#   - action: utter_league_matches
 
-- story: ask match type
-  steps:
-  - action: utter_ask_match_type
-  - intent: choose_type
-  - action: utter_country_matches
+# - story: ask match type
+#   steps:
+#   - action: utter_ask_match_type
+#   - intent: choose_type
+#   - action: utter_country_matches
 
-- story: ask match type - league
-  steps:
-  - action: utter_ask_match_type
-  - intent: choose_type
-  - action: utter_league_matches
+# - story: ask match type - league
+#   steps:
+#   - action: utter_ask_match_type
+#   - intent: choose_type
+#   - action: utter_league_matches
 
 
 - story: sad path 1
