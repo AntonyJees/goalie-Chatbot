@@ -6,6 +6,7 @@ __pycache__/
 # models
 models/
 .rasa/cache/
+ .rasa/rasa/cache/*
 
 # C extensions
 *.so
@@ -213,3 +214,7 @@ __marimo__/
 /models
 .rasa/cache/cache.db
 /.rasa
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
