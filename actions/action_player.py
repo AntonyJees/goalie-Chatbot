@@ -1,6 +1,7 @@
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import random
+from rasa_sdk.events import SlotSet
 
 class ActionShowPlayerStats(Action):
     def name(self) -> str:
@@ -9,8 +10,8 @@ class ActionShowPlayerStats(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: dict):
-        
-        player = tracker.get_slot("player")
+        player = next(tracker.get_latest_entity_values("player"), None)
+        # player = tracker.get_slot("player")
         print(f"Player name from slot: {player}")
 
         player_name = player

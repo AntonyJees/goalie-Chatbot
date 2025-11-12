@@ -10,10 +10,16 @@ stories:
   - action: utter_happy
   # - intent: country_matches
 
+
 - story: player stats inquiry
   steps:
     - intent: player_stats
     - action: action_show_player_stats
+
+- story: ask score inquiry
+  steps:
+    - intent: ask_score
+    - action: action_show_match_score
 
 # - story: show league matches
 #   steps:

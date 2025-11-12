@@ -29,47 +29,182 @@ nlu:
     - I need stats for [Luka Modric](player)
     - fetch stats for [Mohamed Salah](player)
     - display stats for [Virgil van Dijk](player)
+    - can you tell me [Messi](player)’s stats?
+    - how did [Ronaldo](player) perform?
+    - what are the stats of [Neymar](player) this season?
+    - show [Mbappe](player)’s record
+    - give me [De Bruyne](player)’s game stats
+    - I want [Lewandowski](player)’s performance numbers
+    - stats for [Sergio Ramos](player) today
+    - tell me about [Modric](player)
+    - [Salah](player) stats, please
+    - latest stats for [Van Dijk](player)
+    - [Messi] (player) stats?
+    - stats of [Cristiano Ronaldo](player)
+    - performance of [Neymar](player)
+    - record of [Kylian Mbappe](player)
+    - match stats for [Kevin De Bruyne](player)
+    - show me [Robert Lewandowski](player)’s stats
+    - give [Sergio Ramos](player) performance numbers
+    - I need [Luka Modric](player) stats
+    - fetch [Mohamed Salah](player) performance
+    - display [Virgil van Dijk](player) stats
+    - what are [Messi](player)’s stats today?
+    - stats for [Messi](player) today
+    - get [Ronaldo](player) record
+    - fetch [Neymar](player) stats
+    - tell me [Mbappe](player)’s stats
+    - I want [De Bruyne](player) data
+    - latest [Lewandowski](player) stats
+    - performance of [Sergio Ramos](player)
+    - match stats for [Modric](player)
+    - [Salah](player) numbers
+    - give me [Van Dijk](player) stats now
+    - show me [Messi](player) performance numbers
 
-# - intent: country_matches
-#   examples: |
-#     - show me country matches
-#     - I want to see country matches
-#     - country matches
-#     - country
-#     - which country matches are there
-#     - tell me country matches
-#     - country match info
-#     - country match details
+- intent: ask_score
+  examples: |
+    # Two-team match queries
+    - What's the score of [Manchester United](team) vs [Liverpool](team)?
+    - Show me the score between [Real Madrid](team) and [Barcelona](team)
+    - Who won the match between [Chelsea](team) and [Arsenal](team)?
+    - Give me the result of [Bayern Munich](team) vs [Borussia Dortmund](team)
+    - Did [Juventus](team) win against [Inter Milan](team)?
+    - Tell me the score of [AC Milan](team) and [Napoli](team)
+    - How did [PSG](team) play against [Marseille](team)?
+    - What was the final score of [Tottenham](team) vs [Manchester City](team)?
+    - [Liverpool](team) vs [Everton](team) score please
+    - [Arsenal](team) vs [Chelsea](team) result?
+    - Who won between [Bayern Munich](team) and [RB Leipzig](team)?
+    - Show [Barcelona](team) vs [Real Madrid](team) score
+    - [Manchester United](team) vs [Arsenal](team) match result
+    - Tell me [Tottenham](team) vs [Liverpool](team) scoreline
+    - Any update on [Juventus](team) vs [Napoli](team)?
+    - [PSG](team) and [Lyon](team) final score?
+    - What’s the result for [Dortmund](team) vs [Bayern](team)?
+    - Result of [Real Madrid](team) match with [Barcelona](team)
+    - Scoreline between [Liverpool](team) and [Chelsea](team)
+    - Who won [Manchester City](team) vs [Arsenal](team)?
+    - What's the score of [Manchester United](team) vs [Liverpool](team)?
+    - Show me [Real Madrid](team) vs [Barcelona](team) score
+    - [Chelsea](team) vs [Arsenal](team) result?
+    - [PSG](team) against [Marseille](team) score?
+    - [Juventus](team) vs [Inter Milan](team) match result
+    - How did [Bayern Munich](team) play vs [Dortmund](team)?
+    - [Tottenham](team) and [Manchester City](team) scoreline
+    - What’s [Liverpool](team) vs [Everton](team) result?
+    - Who won between [Arsenal](team) and [Chelsea](team)?
+    - [Bayern Munich](team) vs [RB Leipzig](team) latest score?
+    - [Barcelona](team) against [Real Madrid](team) result please
+    - What was [Barcelona](team)'s last match score?
+    - Show me [Liverpool](team)’s last game result
+    - [Arsenal](team)’s last match result please
+    - Did [Manchester City](team) win their last match?
+    - What was [PSG](team)’s latest score?
+    - Tell me about [Bayern Munich](team)’s most recent match
+    - How did [Real Madrid](team) perform last game?
+    - Any updates on [Chelsea](team)’s last match result?
+    - What’s [Juventus](team)’s last game score?
+    - [Tottenham](team)’s latest match result?
+    - Show me [Kerala Blasters](team)’s last game score
 
-# - intent: league
-#   examples: |
-#     - show me [LaLiga](league) matches from [Spain](country)
-#     - I want to see [Premier League](league) matches in [England](country)
-#     - show [Bundesliga](league) matches from [Germany](country)
-#     - list all [Serie A](league) games in [Italy](country)
-#     - tell me [Ligue 1](league) matches from [France](country)
-#     - show [Eredivisie](league) fixtures in [Netherlands](country)
-#     - what [LaLiga](league) games are happening in [Spain](country)
-#     - give me [Premier League](league) match info for [England](country)
-#     - [Bundesliga](league) match schedule in [Germany](country)
-#     - any [Serie A](league) matches today in [Italy](country)
-#     - show today's [LaLiga](league) fixtures from [Spain](country)
-#     - what [Ligue 1](league) matches are on in [France](country)
-#     - show upcoming [Premier League](league) matches in [England](country)
-#     - tell me about [LaLiga](league) games happening in [Spain](country)
-#     - give me [Serie A](league) match details in [Italy](country)
+- lookup: team
+  examples: |
+    - Manchester United
+    - Manchester City
+    - Liverpool
+    - Chelsea
+    - Arsenal
+    - Tottenham Hotspur
+    - Newcastle United
+    - Aston Villa
+    - West Ham United
+    - Brighton & Hove Albion
+    - Real Madrid
+    - Barcelona
+    - Atletico Madrid
+    - Sevilla
+    - Villarreal
+    - Real Sociedad
+    - Real Betis
+    - Valencia
+    - Bayern Munich
+    - Borussia Dortmund
+    - RB Leipzig
+    - Bayer Leverkusen
+    - Eintracht Frankfurt
+    - Union Berlin
+    - AC Milan
+    - Inter Milan
+    - Juventus
+    - Napoli
+    - AS Roma
+    - Lazio
+    - Atalanta
+    - Paris Saint-Germain
+    - Marseille
+    - Lyon
+    - Monaco
+    - Lille
+    - Nice
+    - Ajax
+    - PSV Eindhoven
+    - Feyenoord
+    - AZ Alkmaar
+    - FC Porto
+    - Benfica
+    - Sporting CP
+    - Celtic
+    - Rangers
+    - Galatasaray
+    - Fenerbahçe
+    - Besiktas
+    - Shakhtar Donetsk
+    - Dynamo Kyiv
+    - Zenit Saint Petersburg
+    - Spartak Moscow
+    - Red Star Belgrade
+    - Partizan Belgrade
+    - Club Brugge
+    - Anderlecht
+    - Genk
+    - Copenhagen
+    - Midtjylland
+    - AIK
+    - Malmo FF
+    - HJK Helsinki
+    - Basel
+    - Young Boys
+    - FC Zürich
+    - Dinamo Zagreb
+    - Red Bull Salzburg
+    - Rapid Wien
+    - Slavia Prague
+    - Sparta Prague
+    - Legia Warsaw
+    - Ferencvaros
+    - Sheriff Tiraspol
+    - Mumbai City FC
+    - ATK Mohun Bagan
+    - Bengaluru FC
+    - Kerala Blasters
+    - Chennaiyin FC
+    - FC Goa
+    - Hyderabad FC
+    - Jamshedpur FC
+    - East Bengal FC
+    - NorthEast United FC
+    - Punjab FC
+    - Mohammedan SC
+    - Gokulam Kerala FC
+    - Churchill Brothers
+    - Real Kashmir FC
+    - Salgaocar FC
+    - Aizawl FC
+    - Shillong Lajong FC
+    - TRAU FC
+    - Sreenidi Deccan FC
 
-
-# - intent: choose-type
-#   examples: |
-#     - I want country matches
-#     - Show me league matches
-#     - Country matches
-#     - League matches
-#     - Country
-#     - League
-#     - I want to see country matches
-#     - I want to see league matches
 
 - intent: goodbye
   examples: |
