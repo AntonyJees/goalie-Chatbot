@@ -11,16 +11,19 @@ intents:
   - player_stats
   - ask_score
   - next_match_schedule
+  - league_matches_today
 
 entities:
   - player
   - team
+  - league
 
 actions:
   - action_show_league_matches
   - action_show_player_stats
   - action_show_match_score
   - action_next_match_schedule
+  - action_league_schedule
 
 slots:
   player:
@@ -35,6 +38,12 @@ slots:
     mappings:
       - type: from_entity
         entity: team
+  league:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: league
 
 responses:
   utter_greet:

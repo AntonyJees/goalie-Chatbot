@@ -132,7 +132,28 @@ nlu:
     - I want details about [Barcelona](team)'s next scheduled match.
     - What’s the next match date for [Barcelona](team)?
 
-
+- intent: league_matches_today
+  examples: |
+    - Which teams are playing in the [Premier League](league) today?
+    - Who is playing in the [La Liga](league) today?
+    - Show me today's matches in the [Bundesliga](league)
+    - What matches are happening today in the [Serie A](league)?
+    - Today's fixtures for [Ligue 1](league)
+    - Tell me the teams playing today in the [Premier League](league)
+    - List of matches in [La Liga](league) for today
+    - What games are scheduled today in the [Bundesliga](league)?
+    - Today's match schedule for [Serie A](league)
+    - Which teams are facing off today in [Ligue 1](league)?
+    - Who is playing today in the [Eredivisie](league)?
+    - Show me today's matches in the [Primeira Liga](league)
+    - What matches are happening today in the [Scottish Premiership](league)?
+    - Today's fixtures for [Turkish Super Lig](league)
+    - Tell me the teams playing today in the [Ukrainian Premier League](league)
+    - List of matches in [Russian Premier League](league) for today
+    - What games are scheduled today in the [Belgian Pro League](league)?
+    - Today's match schedule for [Danish Superliga](league)
+    - Which teams are facing off today in [Allsvenskan](league)?
+    - Who is playing today in the [Indian Super League](league)?
 
 - lookup: team
   examples: |
