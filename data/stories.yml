@@ -21,6 +21,11 @@ stories:
     - intent: ask_score
     - action: action_show_match_score
 
+- story: next match schedule inquiry
+  steps:
+    - intent: next_match_schedule
+    - action: action_next_match_schedule
+
 # - story: show league matches
 #   steps:
 #     - intent: league

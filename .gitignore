@@ -6,7 +6,7 @@ __pycache__/
 # models
 models/
 .rasa/cache/
- .rasa/rasa/cache/*
+.rasa/rasa/cache/*
 
 # C extensions
 *.so

@@ -1,8 +1,7 @@
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import random
-from rasa_sdk.events import SlotSet
-
+ 
 class ActionShowPlayerStats(Action):
     def name(self) -> str:
         return "action_show_player_stats"

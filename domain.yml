@@ -10,6 +10,7 @@ intents:
   - bot_challenge
   - player_stats
   - ask_score
+  - next_match_schedule
 
 entities:
   - player
@@ -19,6 +20,7 @@ actions:
   - action_show_league_matches
   - action_show_player_stats
   - action_show_match_score
+  - action_next_match_schedule
 
 slots:
   player:

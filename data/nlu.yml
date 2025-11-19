@@ -19,48 +19,49 @@ nlu:
 
 - intent: player_stats
   examples: |
-    - show me stats for [Lionel Messi](player)
-    - I want to see stats for [Cristiano Ronaldo](player)
-    - get me stats for [Neymar](player)
-    - player stats for [Kylian Mbappe](player)
-    - show stats of [Kevin De Bruyne](player)
-    - stats for [Robert Lewandowski](player)
-    - give me stats for [Sergio Ramos](player)
-    - I need stats for [Luka Modric](player)
-    - fetch stats for [Mohamed Salah](player)
-    - display stats for [Virgil van Dijk](player)
-    - can you tell me [Messi](player)’s stats?
+    - stats for [Erling Haaland](player)
+    - tell me about [unknown player](player)
+    - show me stats for [some random player](player)
+    - show me stats for [Messi](player)
+    - show me stats for [Neymar](player)
+    - show me stats for [Ronaldo](player)
+    - show me stats for [Mbappe](player)
+    - show me stats for [Salah](player)
+    - show me stats for [De Bruyne](player)
+
+    - player stats for [Messi](player)
+    - player stats for [Neymar](player)
+    - player stats for [Ronaldo](player)
+    - player stats for [Mbappe](player)
+
+    - stats of [Messi](player)
+    - stats of [Neymar](player)
+    - stats of [Ronaldo](player)
+    - stats of [Salah](player)
+
+    - how did [Messi](player) perform?
+    - how did [Neymar](player) perform?
     - how did [Ronaldo](player) perform?
-    - what are the stats of [Neymar](player) this season?
-    - show [Mbappe](player)’s record
-    - give me [De Bruyne](player)’s game stats
-    - I want [Lewandowski](player)’s performance numbers
-    - stats for [Sergio Ramos](player) today
-    - tell me about [Modric](player)
-    - [Salah](player) stats, please
-    - latest stats for [Van Dijk](player)
-    - [Messi] (player) stats?
-    - stats of [Cristiano Ronaldo](player)
-    - performance of [Neymar](player)
-    - record of [Kylian Mbappe](player)
-    - match stats for [Kevin De Bruyne](player)
-    - show me [Robert Lewandowski](player)’s stats
-    - give [Sergio Ramos](player) performance numbers
-    - I need [Luka Modric](player) stats
-    - fetch [Mohamed Salah](player) performance
-    - display [Virgil van Dijk](player) stats
-    - what are [Messi](player)’s stats today?
-    - stats for [Messi](player) today
-    - get [Ronaldo](player) record
-    - fetch [Neymar](player) stats
-    - tell me [Mbappe](player)’s stats
-    - I want [De Bruyne](player) data
-    - latest [Lewandowski](player) stats
-    - performance of [Sergio Ramos](player)
-    - match stats for [Modric](player)
-    - [Salah](player) numbers
-    - give me [Van Dijk](player) stats now
-    - show me [Messi](player) performance numbers
+
+    - [Messi](player) stats today
+    - [Neymar](player) stats today
+    - [Mbappe](player) stats today
+
+
+- lookup: player
+  examples: |
+    - Lionel Messi
+    - Messi
+    - Cristiano Ronaldo
+    - Ronaldo
+    - Neymar
+    - Kylian Mbappe
+    - Mbappe
+    - Salah
+    - Mohamed Salah
+    - Kevin De Bruyne
+    - De Bruyne
+
 
 - intent: ask_score
   examples: |
@@ -107,6 +108,31 @@ nlu:
     - What’s [Juventus](team)’s last game score?
     - [Tottenham](team)’s latest match result?
     - Show me [Kerala Blasters](team)’s last game score
+
+- intent: next_match_schedule
+  examples: |
+    - When is [Barcelona](team)’s next match scheduled?
+    - Tell me the date of [Barcelona](team)’s next game.
+    - What day is [Barcelona](team) playing next?
+    - I want to know the schedule of [Barcelona](team)'s upcoming match.
+    - What is the next game date for [Barcelona](team)?
+    - On which date is [Barcelona](team) playing their next fixture?
+    - When will [Barcelona](team) play again?
+    - Can you give me the upcoming match schedule for [Barcelona](team)?
+    - Provide the date and time of [Barcelona](team)'s next match.
+    - What is the upcoming fixture date for [Barcelona](team)?
+    - Show me when [Barcelona](team) plays next.
+    - I need the next match schedule for [Barcelona](team).
+    - When does [Barcelona](team) have their next fixture scheduled?
+    - Tell me when the next match of [Barcelona](team) will happen.
+    - What's the time and date for [Barcelona](team)'s upcoming game?
+    - Give me the schedule for [Barcelona](team)’s next fixture.
+    - When is the next kickoff for [Barcelona](team)?
+    - Tell me the upcoming match timing of [Barcelona](team).
+    - I want details about [Barcelona](team)'s next scheduled match.
+    - What’s the next match date for [Barcelona](team)?
+
+
 
 - lookup: team
   examples: |
